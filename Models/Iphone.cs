@@ -1,8 +1,20 @@
 namespace DesafioPOO.Models
 {
-    // TODO: Herdar da classe "Smartphone"
-    public class Iphone
+    public class Iphone : Smartphone
     {
-        // TODO: Sobrescrever o método "InstalarAplicativo"
+        public void InstalarAplicativo(string nomeApp)
+        {
+            if (nomeApp == null)
+            {
+                Console.WriteLine("Essa aplicação não existe");
+            }
+
+            else
+            {
+                Console.WriteLine($"Baixando {nomeApp}... Por favor aguarde.");
+                Thread.Sleep(1000);
+                Console.WriteLine($"Pronto! {nomeApp} foi instalado com sucesso.");
+            }
+        }
     }
 }
